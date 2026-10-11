@@ -1,0 +1,20 @@
+{
+  "name": "devocao-mariana",
+  "version": "1.0.0",
+  "description": "Devoção Mariana - Loja de Artigos Sagrados e Checkout Pix Seguro",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ecommerce",
+    "checkout",
+    "pix",
+    "devocao-mariana"
+  ],
+  "author": "Devoção Mariana",
+  "license": "ISC"
+}

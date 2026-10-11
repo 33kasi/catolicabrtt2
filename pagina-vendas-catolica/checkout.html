@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalização Segura do Pedido | Devoção Mariana</title>
+  <meta name="description" content="Checkout oficial e protegido para envio dos seus artigos sagrados pelos Correios.">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Favicon Sagrado -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕊️</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Estilos do Checkout -->
+  <link rel="stylesheet" href="checkout.css">
+
+  <!-- Meta Pixel Code (Facebook Ads: 1754721425529202) -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1754721425529202');
+    fbq('track', 'PageView');
+    fbq('track', 'InitiateCheckout', {
+      content_name: 'Grande Kit Bênção Total do Lar 2026',
+      content_type: 'product',
+      value: 109.90,
+      currency: 'BRL',
+      num_items: 3
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1754721425529202&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body class="checkout-clean-body">
+
+  <!-- TOPO: SEGURANÇA E MARCA -->
+  <header class="checkout-clean-topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="clean-brand-link" title="Voltar para a página inicial">
+        <i class="fas fa-dove"></i>
+        <span>DEVOÇÃO MARIANA</span>
+      </a>
+      <div class="clean-security-pill">
+        <i class="fas fa-shield-halved"></i>
+        <span>PAGAMENTO 100% SEGURO</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTAINER PRINCIPAL DO CHECKOUT (ESTILO MINIMALISTA) -->
+  <main class="checkout-main checkout-clean-wrapper">
+    <div class="checkout-clean-container">
+
+      <!-- CARD 1: SEU CARRINHO (3 PEÇAS SAGRADAS) -->
+      <section class="checkout-card card-carrinho" id="cardCarrinho" aria-label="Seu carrinho">
+        <div class="carrinho-header" id="carrinhoToggleBtn">
+          <div class="carrinho-header-left">
+            <span class="carrinho-title">Seu carrinho</span>
+            <span class="carrinho-badge-count">3</span>
+          </div>
+          <div class="carrinho-header-right">
+            <i class="fas fa-chevron-down" id="carrinhoChevron"></i>
+          </div>
+        </div>
+
+        <div class="carrinho-items-list" id="carrinhoItemsList">
+          <!-- Item 1: Estátua -->
+          <div class="carrinho-item">
+            <div class="carrinho-item-thumb">
+              <img src="assets/estatua-hd.jpg" alt="Kit Nossa Senhora de Fátima">
+            </div>
+            <div class="carrinho-item-info">
+              <strong class="item-name">KIT NOSSA SENHORA DE FÁTIMA</strong>
+              <span class="item-desc">Estátua 30cm • Já Benzida</span>
+            </div>
+            <div class="carrinho-item-qty">1 un.</div>
+          </div>
+
+          <!-- Item 2: Calendário -->
+          <div class="carrinho-item">
+            <div class="carrinho-item-thumb">
+              <img src="assets/calendario-hd.jpg" alt="Calendário Devocional Fátima">
+            </div>
+            <div class="carrinho-item-info">
+              <strong class="item-name">CALENDARIO DEVOCIONAL FÁTIMA</strong>
+              <span class="item-desc">Parede 12 Meses Oficial 2026</span>
+            </div>
+            <div class="carrinho-item-qty">1 un.</div>
+          </div>
+
+          <!-- Item 3: Terço -->
+          <div class="carrinho-item">
+            <div class="carrinho-item-thumb">
+              <img src="assets/terco-hd.jpg" alt="Terço Tulipa">
+            </div>
+            <div class="carrinho-item-info">
+              <strong class="item-name">TERÇO TULIPA</strong>
+              <span class="item-desc">Cristal Facetado de Alto Brilho</span>
+            </div>
+            <div class="carrinho-item-qty">1 un.</div>
+          </div>
+
+          <!-- Brinde Gratuito -->
+          <div class="carrinho-item item-gift">
+            <div class="carrinho-item-thumb thumb-gift">
+              <i class="fas fa-gift"></i>
+            </div>
+            <div class="carrinho-item-info">
+              <strong class="item-name">LIVRETO DEVOCIONAL (BRINDE)</strong>
+              <span class="item-desc">7 Bênçãos para Consagração do Lar</span>
+            </div>
+            <div class="carrinho-item-qty gift-free">Grátis</div>
+          </div>
+        </div>
+
+        <div class="carrinho-totals">
+          <div class="carrinho-total-row">
+            <span>Subtotal</span>
+            <span id="summarySubtotal">R$ 109,90</span>
+          </div>
+          <div class="carrinho-total-row">
+            <span>Frete</span>
+            <span id="summaryShipping" class="free-shipping-tag">Grátis</span>
+          </div>
+          <div class="carrinho-total-row total-highlight">
+            <span>Total</span>
+            <span id="summaryTotal">R$ 109,90</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULÁRIO -->
+      <form id="checkoutMainForm" class="checkout-clean-form">
+
+        <!-- CARD 2: IDENTIFICAÇÃO -->
+        <section class="checkout-card card-identificacao">
+          <div class="card-header-clean">
+            <h3>Identificação</h3>
+          </div>
+
+          <div class="form-group-clean">
+            <label for="inputEmail">E-mail</label>
+            <input type="email" id="inputEmail" name="email" autocomplete="email" placeholder="email@email.com" maxlength="100">
+          </div>
+
+          <div class="form-group-clean">
+            <label for="inputTelefone">Telefone</label>
+            <input type="tel" id="inputTelefone" name="telefone" autocomplete="tel" required placeholder="(99) 99999-9999" maxlength="15">
+          </div>
+
+          <div class="form-group-clean">
+            <label for="inputNome">Nome completo</label>
+            <input type="text" id="inputNome" name="nome" autocomplete="name" required placeholder="Nome e Sobrenome" maxlength="80">
+          </div>
+
+          <div class="form-group-clean">
+            <label for="inputCpf">CPF</label>
+            <input type="text" id="inputCpf" name="cpf" autocomplete="off" required placeholder="000.000.000-00" maxlength="14">
+          </div>
+        </section>
+
+        <!-- CARD 3: ENTREGA -->
+        <section class="checkout-card card-entrega">
+          <div class="card-header-clean">
+            <h3>Entrega</h3>
+            <span class="card-subtitle-link">Envio protegido pelos Correios com seguro</span>
+          </div>
+
+          <div class="form-group-clean">
+            <label for="inputCep">CEP</label>
+            <div class="cep-input-wrapper">
+              <input type="text" id="inputCep" name="cep" autocomplete="postal-code" required placeholder="12345-000" maxlength="9">
+              <button type="button" class="btn-search-cep-clean" id="btnSearchCep">
+                <i class="fas fa-magnifying-glass"></i> Buscar
+              </button>
+            </div>
+            <div class="cep-loading-hint" id="cepLoadingHint" style="display: none;">
+              <i class="fas fa-spinner fa-spin"></i> Localizando seu endereço nos Correios...
+            </div>
+            <div class="cep-fallback-hint" id="cepFallbackHint">
+              Digite seu CEP para preenchimento automático.
+            </div>
+          </div>
+
+          <!-- Campos de Endereço -->
+          <div class="address-fields-grid" id="addressFieldsContainer">
+            <div class="form-row-clean">
+              <div class="form-group-clean" style="flex: 2.2;">
+                <label for="inputRua">Rua / Logradouro</label>
+                <input type="text" id="inputRua" name="rua" autocomplete="address-line1" required placeholder="Ex: Rua das Flores" maxlength="100">
+              </div>
+              <div class="form-group-clean" style="flex: 1;">
+                <label for="inputNumero">Número</label>
+                <input type="text" id="inputNumero" name="numero" autocomplete="address-line2" required placeholder="Ex: 123" maxlength="15">
+              </div>
+            </div>
+
+            <div class="form-row-clean">
+              <div class="form-group-clean" style="flex: 1;">
+                <label for="inputComplemento">Complemento (opcional)</label>
+                <input type="text" id="inputComplemento" name="complemento" autocomplete="address-line3" placeholder="Ex: Apto 12" maxlength="50">
+              </div>
+              <div class="form-group-clean" style="flex: 1;">
+                <label for="inputBairro">Bairro</label>
+                <input type="text" id="inputBairro" name="bairro" autocomplete="address-level3" required placeholder="Ex: Centro" maxlength="60">
+              </div>
+            </div>
+
+            <div class="form-row-clean">
+              <div class="form-group-clean" style="flex: 2;">
+                <label for="inputCidade">Cidade</label>
+                <input type="text" id="inputCidade" name="cidade" autocomplete="address-level2" required placeholder="Ex: São Paulo" maxlength="60">
+              </div>
+              <div class="form-group-clean" style="flex: 1;">
+                <label for="inputEstado">Estado (UF)</label>
+                <input type="text" id="inputEstado" name="estado" autocomplete="address-level1" required placeholder="UF" maxlength="2" style="text-transform: uppercase;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Opções de Frete dos Correios -->
+          <div class="shipping-section-clean" id="shippingStepBox" style="display: none;">
+            <div class="shipping-header-clean">
+              <strong>Escolha o melhor frete para você</strong>
+              <p>A previsão de entrega pode variar de acordo com a região e facilidade de acesso ao seu endereço</p>
+            </div>
+            <div class="shipping-options-wrap" id="shippingOptionsContainer">
+              <!-- Preenchido dinamicamente pelo checkout.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- CARD 4: FORMA DE PAGAMENTO & FINALIZAÇÃO -->
+        <section class="checkout-card card-pagamento">
+          <div class="card-header-clean">
+            <h3>Forma de Pagamento</h3>
+          </div>
+
+          <div class="pix-clean-option active">
+            <div class="pix-clean-left">
+              <div class="pix-radio-circle checked"></div>
+              <div class="pix-icon-box">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#32BCAD" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/>
+                </svg>
+              </div>
+              <div class="pix-clean-info">
+                <strong>Pix Banco Central</strong>
+                <span>Aprovação instantânea • Despacho prioritário</span>
+              </div>
+            </div>
+            <span class="pix-instant-tag-clean"><i class="fas fa-bolt"></i> Imediato</span>
+          </div>
+
+          <button type="submit" class="btn-submit-order-clean" id="btnSubmitOrder">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/>
+            </svg>
+            <span>FINALIZAR PEDIDO NO PIX • R$ 109,90</span>
+          </button>
+        </section>
+
+      </form>
+
+      <!-- RODAPÉ CLEAN (IGUAL AO PRINT) -->
+      <footer class="checkout-footer-clean">
+        <div class="footer-payment-methods">
+          <span>Formas de pagamento</span>
+          <div class="footer-icons-row">
+            <div class="footer-icon-pill" title="Pix">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#32BCAD" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/>
+              </svg>
+            </div>
+            <div class="footer-icon-pill" title="Código de Barras">
+              <i class="fas fa-barcode"></i>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-copyright-clean">
+          © 2026 SANTUÁRIO DE FÁTIMA • DEVOÇÃO MARIANA
+        </p>
+
+        <a href="index.html" class="link-voltar-loja">
+          <i class="fas fa-arrow-left"></i> Voltar à Loja
+        </a>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Script do Checkout -->
+  <script src="checkout.js"></script>
+</body>
+</html>
