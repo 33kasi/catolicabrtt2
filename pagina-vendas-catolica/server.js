@@ -183,11 +183,11 @@ carregarPedidosDoDisco();
 // ==============================================================================
 const SECURITY_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
-  'X-Frame-Options': 'DENY',
+  'X-Frame-Options': 'SAMEORIGIN',
   'X-XSS-Protection': '1; mode=block',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
-  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://api.qrserver.com https://checkoutseguro.info https://www.facebook.com; connect-src 'self' https://viacep.com.br https://connect.facebook.net https://www.facebook.com; frame-ancestors 'none';"
+  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://connect.facebook.net https://*.facebook.net https://*.facebook.com https://*.fbcdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https://api.qrserver.com https://checkoutseguro.info https://*.facebook.com https://*.facebook.net https://*.fbcdn.net; connect-src 'self' https://viacep.com.br https://*.facebook.net https://*.facebook.com https://graph.facebook.com; frame-src 'self' https://*.facebook.com https://*.facebook.net; frame-ancestors 'self' https://*.facebook.com https://*.instagram.com;"
 };
 
 function applySecurityHeaders(res) {
@@ -749,8 +749,9 @@ const server = http.createServer(async (req, res) => {
   // ========================================================
   // 5. SERVIR ARQUIVOS ESTÁTICOS COM BLOQUEIO RIGOROSO DE ARQUIVOS INTERNOS
   // ========================================================
-  const normalizedPath = path.normalize(pathname).replace(/^(\.\.[\/\\])+/, '');
-  let filePath = path.join(__dirname, normalizedPath === '/' ? 'index.html' : normalizedPath);
+  const cleanPath = (pathname === '/' || pathname === '' || pathname === '/index.html') ? 'index.html' : pathname.replace(/^\/+/, '');
+  const normalizedPath = path.normalize(cleanPath).replace(/^(\.\.[\/\\])+/, '');
+  let filePath = path.join(__dirname, normalizedPath);
 
   // Prevenir Path Traversal
   if (!filePath.startsWith(__dirname)) {

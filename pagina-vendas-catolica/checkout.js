@@ -225,6 +225,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Atualização inicial
   atualizarTotal();
 
+  // Disparo dinâmico do evento InitiateCheckout no Facebook Pixel
+  if (typeof fbq === 'function') {
+    try {
+      fbq('track', 'InitiateCheckout', {
+        content_name: produtoAtual.nome,
+        content_type: 'product',
+        value: Number(produtoAtual.preco.toFixed(2)),
+        currency: 'BRL'
+      });
+    } catch (e) {}
+  }
+
   // Toggle do Carrinho (Expandir / Recolher)
   const carrinhoToggleBtn = document.getElementById('carrinhoToggleBtn');
   const carrinhoItemsList = document.getElementById('carrinhoItemsList');
@@ -738,10 +750,16 @@ document.addEventListener('DOMContentLoaded', () => {
           })
         });
 
-        const data = await response.json();
+        let data = null;
+        try {
+          const rawText = await response.text();
+          data = rawText ? JSON.parse(rawText) : null;
+        } catch (jsonErr) {
+          throw new Error('O servidor de processamento de Pix não respondeu adequadamente. Verifique se o serviço está configurado como Web Service na hospedagem.');
+        }
 
-        if (!response.ok || !data.success || !data.pix || !data.pix.code) {
-          throw new Error(data.message || 'Não foi possível gerar a chave Pix no momento. Tente novamente em instantes.');
+        if (!data || !response.ok || !data.success || !data.pix || !data.pix.code) {
+          throw new Error((data && data.message) || 'Não foi possível gerar a chave Pix no momento. Tente novamente em instantes.');
         }
 
         pixCode = data.pix.code;

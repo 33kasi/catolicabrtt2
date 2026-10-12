@@ -34,18 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. FACEBOOK PIXEL TRACKING - CLIQUES NOS BOTÕES DE COMPRA
-  const ctaLinks = document.querySelectorAll('a[href*="checkout.html"]');
-  ctaLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', {
-          content_name: 'Grande Kit Bênção Total do Lar 2026',
-          content_type: 'product',
-          value: 109.90,
-          currency: 'BRL'
-        });
-      }
-    });
-  });
+  // 4. O rastreamento de InitiateCheckout é realizado nativamente na chegada ao checkout.html
 });
